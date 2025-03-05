@@ -1,0 +1,246 @@
+.new-budget-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.new-budget-button:hover {
+  background-color: #45a049;
+}
+
+.form-group {
+  margin: 20px 0;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed;
+  min-width: 800px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Set specific widths for columns */
+th:nth-child(1), td:nth-child(1) { width: 15%; } /* Cliente */
+th:nth-child(2), td:nth-child(2) { width: 10%; } /* Valor Total */
+th:nth-child(3), td:nth-child(3) { width: 15%; } /* Data de Criação */
+th:nth-child(4), td:nth-child(4) { width: 15%; } /* Válido até */
+th:nth-child(5), td:nth-child(5) { width: 15%; } /* Status */
+th:nth-child(6), td:nth-child(6) { 
+  width: 30%; 
+  text-align: right;
+  padding-right: 16px;
+} /* Ações */
+
+/* Action buttons styling */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 200px;
+  padding: 5px 10px;
+}
+
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #666;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.action-button:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.action-button i {
+  font-size: 16px;
+}
+
+.view-button {
+  color: #3498db;
+}
+
+.view-button:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.edit-button {
+  color: #f39c12;
+}
+
+.edit-button:hover {
+  background-color: rgba(243, 156, 18, 0.1);
+}
+
+.finalize-button {
+  color: #2ecc71;
+}
+
+.finalize-button:hover {
+  background-color: rgba(46, 204, 113, 0.1);
+}
+
+.cancel-button {
+  color: #e74c3c;
+}
+
+.cancel-button:hover {
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.reactivate-button {
+  color: #9b59b6;
+}
+
+.reactivate-button:hover {
+  background-color: rgba(155, 89, 182, 0.1);
+}
+
+/** Overrides for action button sizes **/
+td button, td a.action-button {
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 4px;
+  margin: 0 2px;
+  text-decoration: none;
+}
+
+td a.action-button {
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  color: inherit;
+}
+
+.action-button i {
+  font-size: 16px;
+}
+
+/* Status styling */
+.status-pendente, .status-finalizado, .status-cancelado, .status-expirado {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+}
+
+.status-pendente {
+  background-color: #f39c12;
+}
+
+.status-finalizado {
+  background-color: #27ae60;
+}
+
+.status-cancelado {
+  background-color: #e74c3c;
+}
+
+.status-expirado {
+  background-color: #e74c3c;
+}
+
+.expired-tag {
+  background-color: #F44336;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+/* Links in table */
+td a {
+  margin: 0 5px;
+  color: #2196F3;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+td button {
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+td button:first-of-type {
+  background-color: #4CAF50;
+  color: white;
+}
+
+td button:first-of-type:hover {
+  background-color: #45a049;
+}
+
+td button:last-of-type {
+  background-color: #f44336;
+  color: white;
+}
+
+td button:last-of-type:hover {
+  background-color: #da190b;
+}
